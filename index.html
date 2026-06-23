@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un mensajito rápido... 🐢</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #e8f5e9; /* Un verde clarito muy tierno */
+            font-family: 'Caveat', cursive;
+            color: #2e7d32;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .tarjeta-broma {
+            background: #ffffff;
+            border: 3px dashed #81c784;
+            border-radius: 15px;
+            padding: 25px;
+            width: 100%;
+            max-width: 320px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8rem;
+            color: #2e7d32;
+            margin-top: 0;
+        }
+
+        .tortuga-emoji {
+            font-size: 4rem;
+            margin: 15px 0;
+            display: inline-block;
+            animation: caminar 2s infinite ease-in-out;
+        }
+
+        .texto {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: #4caf50;
+        }
+
+        .boton-broma {
+            background: #81c784;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(129, 199, 132, 0.4);
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .boton-broma:hover {
+            background: #66bb6a;
+        }
+
+        /* Alerta de la broma */
+        .alerta-broma {
+            display: none;
+            margin-top: 25px;
+            font-size: 1.6rem;
+            color: #d32f2f;
+            font-weight: bold;
+            animation: aparecer 0.3s ease-out forwards;
+        }
+
+        @keyframes caminar {
+            0%, 100% { transform: translateX(-5px) rotate(-5deg); }
+            50% { transform: translateX(5px) rotate(5deg); }
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta-broma">
+        <h1>¡Felices 2 Meses! 💚</h1>
+        
+        <div class="tortuga-emoji">🐢</div>
+        
+        <div class="texto">
+            Para la Tutuguita más linda de todo el caparazón. <br><br>
+            Preparé esta página súper veloz (como una tortuga) para decirte que te amo mucho. <br><br>
+            Pícale abajo para ver tu gran regalo de aniversario...
+        </div>
+
+        <!-- El botón que activa la broma -->
+        <button class="boton-broma" onclick="activarBroma()">🎁 Reclamar Regalo Gigante</button>
+
+        <!-- Mensaje oculto que sale al picarle -->
+        <div id="mensaje-broma" class="alerta-broma">
+            🚨 ¡ERROR 404! <br>
+            Esta página va muy lento... <br>
+            ¡Mejor pídeme el link real jejeje! 🔍
+        </div>
+    </div>
+
+    <script>
+        function activarBroma() {
+            document.getElementById('mensaje-broma').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
